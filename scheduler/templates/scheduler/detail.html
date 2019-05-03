@@ -1,0 +1,9 @@
+{% if course %}
+    <h3>You have selected this course</h3>
+    <ul>
+        <li>Title: {{course.class_name}} - {{course.class_id}}</li>
+        <li>Instructor: {{course.instructor}}</li>
+    </ul>
+{% else %}
+    <h3>You don't have any classes</h3>
+{% endif %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Course List</h2>
+    <ul>
+        {% for course in all_courses %}
+            <li>
+                {{course.class_name}} <strong>{{course.instructor}}</strong>
+                <a href="{% url 'edit_instructors' course_id=course.id %}">Edit</a>
+                <a href="{% url 'delete' course_id=course.id %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Instructor List</h2>
+    <ul>
+        Test
+        {% for instructor in all_instructors %}
+            <li>
+                <strong>{{instructor.i_name}}</strong> </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
